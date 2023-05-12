@@ -28,3 +28,4 @@ async function getTranslations(text) {
 
   return translations;
 }
+console.log('Bot started');
