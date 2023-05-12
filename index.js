@@ -29,3 +29,6 @@ async function getTranslations(text) {
   return translations;
 }
 console.log('Bot started');
+bot.catch((err, ctx) => {
+    console.log(`Ooops, encountered an error for ${ctx.updateType}`, err)
+  })
