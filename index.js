@@ -1,5 +1,5 @@
 const Telegraf = require('telegraf');
-const fetch = require('node-fetch').default;
+import fetch from 'node-fetch';
 
 const bot = new Telegraf('5616726218:AAERTLFsPKOPEnZQmm_BHStGpZlFtk_aD6Q');
 
@@ -23,4 +23,8 @@ async function getTranslations(text) {
   const translations = [];
 
   if (json.responseData && json.responseData.translatedText) {
-   
+    translations.push(json.responseData.translatedText);
+  }
+
+  return translations;
+}
